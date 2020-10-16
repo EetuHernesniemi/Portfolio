@@ -8,10 +8,13 @@ import { Title } from '@angular/platform-browser';
 })
 export class AppComponent {
   web_page_title = 'portfolio';
-  web_page_owners_genetive = 'eetu\'s';
-  web_page_owner_full_name = 'eetu hernesniemi';
+  web_page_owners_genetive = '\'s';
+  web_page_owner_first_name = 'eetu';
+  web_page_owner_last_name = 'hernesniemi';
+  web_page_owner_full_name = this.web_page_owner_first_name + " " + this.web_page_owner_last_name;
   public constructor(private titleService: Title) {
-    this.setTitle(this.web_page_title + " | " + this.web_page_owner_full_name)
+    const title: string = this.web_page_title.charAt(0).toUpperCase + " | " + this.web_page_owner_first_name.charAt(0).toUpperCase + " " + this.web_page_owner_last_name.toUpperCase;
+    this.setTitle(title);
   }
 
   public setTitle(newTitle: string) {
