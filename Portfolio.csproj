@@ -5,6 +5,7 @@
     <UserSecretsId>d5d5253e-452d-4ec1-add9-a006b5cd97b7</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
+    <Configurations>Debug;Release;DebugClient</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,8 +16,9 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="cd portfolio-client-app&#xD;&#xA;ng build --prod" />
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent" >
+    <Exec Command="cd portfolio-client-app&#xD;&#xA;ng build" Condition="'$(Configuration)' == 'DebugClient'" />
+    <Exec Command="cd portfolio-client-app&#xD;&#xA;ng build --prod" Condition="'$(Configuration)' != '' And '$(Configuration)' == 'Release'" />
   </Target>
 
 </Project>
