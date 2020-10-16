@@ -8,9 +8,10 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('Each app page should have correct page title', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('portfolio-client-app app is running!');
+    const pageTitle = browser.getTitle();
+    expect(pageTitle).toEqual('Portfolio | Eetu Hernesniemi');
   });
 
   afterEach(async () => {
