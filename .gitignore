@@ -348,3 +348,10 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+wwwroot/3rdpartylicenses.txt
+wwwroot/favicon.ico
+wwwroot/index.html
+wwwroot/main.1626de7404c99b32cc01.js
+wwwroot/polyfills.35a5ca1855eb057f016a.js
+wwwroot/runtime.acf0dec4155e77772545.js
+wwwroot/styles.3ff695c00d717f2d2a11.css
