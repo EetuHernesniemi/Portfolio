@@ -6,6 +6,7 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
     <Configurations>Debug;Release;DebugClient</Configurations>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,7 +17,7 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent" >
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="cd portfolio-client-app&#xD;&#xA;ng build" Condition="'$(Configuration)' == 'DebugClient'" />
     <Exec Command="cd portfolio-client-app&#xD;&#xA;ng build --prod" Condition="'$(Configuration)' != '' And '$(Configuration)' == 'Release'" />
   </Target>
