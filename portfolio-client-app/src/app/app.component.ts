@@ -12,6 +12,7 @@ export class AppComponent {
   web_page_owner_first_name = 'eetu';
   web_page_owner_last_name = 'hernesniemi';
   web_page_owner_full_name = this.web_page_owner_first_name + " " + this.web_page_owner_last_name;
+  showFiller = false;
   public constructor(private titleService: Title) {
     const title: string = this.web_page_title.charAt(0).toUpperCase() + this.web_page_title.slice(1) + " | "
       + this.web_page_owner_first_name.charAt(0).toUpperCase() + this.web_page_owner_first_name.slice(1)
