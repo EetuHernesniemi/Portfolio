@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './modules/app-routing.module';
-import { MaterialModule } from './modules/material.module';
+import { MaterialDesignModule } from './modules/material-design.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 
@@ -16,7 +16,7 @@ import { SidenavComponent } from './navigation/sidenav/sidenav.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialDesignModule
   ],
   providers: [],
   bootstrap: [AppComponent]
